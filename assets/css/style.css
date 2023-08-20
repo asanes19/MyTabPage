@@ -314,6 +314,10 @@ color: #d5d5d5;
 
 .data-row{
     margin: 10px;
+    display: flex; /* Use flex layout for row items */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Distribute items evenly, pushing the delete icon to the end */
+  
 }
 #linkType{
     padding: 3px;
@@ -434,6 +438,13 @@ color: #d5d5d5;
 }
 
 .delete-icon{
-    color: #810000;
-    margin: 0 15px
+    color: #757575;
+    margin: 0 15px;
+    font-size: 20px; /* Adjust the font size if needed */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
 }
+
+.delete-icon:hover {
+    color: #2f2f2f; /* Change color on hover */
+  }
