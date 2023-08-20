@@ -432,3 +432,8 @@ color: #d5d5d5;
     display: flex;
     justify-content: space-between;
 }
+
+.delete-icon{
+    color: #810000;
+    margin: 0 15px
+}

@@ -42,37 +42,56 @@ const getElementVal = (id) => {
   return document.getElementById(id).value;
 };
 
+// ... Your existing code ...
 myOwnHomePageDB.once("value").then((snapshot) => {
   snapshot.forEach((childSnapshot) => {
-      const linkData = childSnapshot.val();
-      const linkType = linkData.linkType;
-      const linkName = linkData.linkName;
-      const linkURL = linkData.linkURL;
+    const linkData = childSnapshot.val();
+    const linkType = linkData.linkType;
+    const linkName = linkData.linkName;
+    const linkURL = linkData.linkURL;
+    const linkKey = childSnapshot.key; // Get the unique key for each link
 
-      // Create a new row div element
-      const row = document.createElement("div");
-      row.className = "data-row";
+    // Create a new row div element
+    const row = document.createElement("div");
+    row.className = "data-row";
+    row.setAttribute("data-key", linkKey); // Set the linkKey as a data attribute
 
-      // Create and populate icon element
-      const iconElement = document.createElement("i");
-      iconElement.className = "icon fa fa-link"; // Font Awesome icon
-      row.appendChild(iconElement); // Append icon to the row
+    // Create and populate icon element
+    const iconElement = document.createElement("i");
+    iconElement.className = "icon fa fa-link"; // Font Awesome icon
+    row.appendChild(iconElement); // Append icon to the row
 
-      // Create and populate link element
-      const linkElement = document.createElement("a");
-      linkElement.className = "link-element";
-      linkElement.textContent = linkName;
-      linkElement.href = linkURL;
-      linkElement.target = "_blank"; // Open link in a new tab
+    // Create and populate link element
+    const linkElement = document.createElement("a");
+    linkElement.className = "link-element";
+    linkElement.textContent = linkName;
+    linkElement.href = linkURL;
+    linkElement.target = "_blank"; // Open link in a new tab
+    row.appendChild(linkElement);
 
-      // Append the link element to the row
-      row.appendChild(linkElement);
+    // Create a delete icon element
+    const deleteIcon = document.createElement("i");
+    deleteIcon.className = "delete-icon fa fa-trash";
+    deleteIcon.addEventListener("click", () => deleteLink(linkKey, linkType));
+    row.appendChild(deleteIcon);
 
-      // Get the appropriate data section based on linkType
-      const dataSection = document.querySelector(`.${linkType} .data-section`);
-      if (dataSection) {
-          // Append the row to the data section
-          dataSection.appendChild(row);
-      }
+    // Get the appropriate data section based on linkType
+    const dataSection = document.querySelector(`.${linkType} .data-section`);
+    if (dataSection) {
+      // Append the row to the data section
+      dataSection.appendChild(row);
+    }
   });
 });
+
+function deleteLink(linkKey, linkType) {
+  // Remove from Firebase
+  myOwnHomePageDB.child(linkKey).remove();
+
+  // Remove from HTML
+  const dataSection = document.querySelector(`.${linkType} .data-section`);
+  const row = document.querySelector(`.${linkType} .data-row[data-key="${linkKey}"]`);
+  if (dataSection && row) {
+    dataSection.removeChild(row);
+  }
+}
