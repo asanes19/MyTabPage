@@ -129,9 +129,6 @@ img {
     gap: 1.5rem;
 }
 
-.section {
-    padding: 1.5rem 0 2rem;
-}
 
 
 .main {
@@ -197,8 +194,11 @@ img {
 /* For large devices */
 
 @media screen and (min-width: 1040px) {
+
     .section {
         width: 100%;
+        padding: 1.5rem 0 2rem;
+
     }
 
     .addNewLink{
