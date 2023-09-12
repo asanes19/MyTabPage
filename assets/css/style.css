@@ -284,7 +284,6 @@ color: #d5d5d5;
 }
 
 .colored-box {
-    height: 550px; /* Set the desired height */
     border-radius: 5px;
     border: 2px solid #474747;
     background-color: #232323;
