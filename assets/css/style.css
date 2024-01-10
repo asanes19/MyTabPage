@@ -4,446 +4,434 @@
 /*===============  MY CUSTOM CSS ===============*/
 
 :root {
-    --header-height: 3.5rem;
+  --header-height: 3.5rem;
 
-    /*========== My Custom Colors ==========*/
-    /*Color mode HSL(hue, saturation, lightness)*/
-    --first-color: hsl(0, 100%, 29%);
-    --first-color-alt: hsl(219, 69%, 52%);
-    --title-color: hsl(0, 0%, 0%);
-    --text-color: hsl(0, 0%, 0%);
-    --text-color-light: hsl(0, 0%, 0%);
-    --clr-neon: hsl(0, 100%, 29%);
-    --white-color: #000000;
-    /* --body-color: hsl(219, 4%, 4%); */
+  /*========== My Custom Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(0, 100%, 29%);
+  --first-color-alt: hsl(219, 69%, 52%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 0%);
+  --text-color-light: hsl(0, 0%, 0%);
+  --clr-neon: hsl(0, 100%, 29%);
+  --white-color: #000000;
+  /* --body-color: hsl(219, 4%, 4%); */
 
-    --body-color: #f9f9f9;
-    --container-color: hsl(219, 4%, 7%);
+  --body-color: #f9f9f9;
+  --container-color: hsl(219, 4%, 7%);
 
-    /*========== My Custom Font and typography ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    --body-font: "Exo", sans-serif;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
+  /*========== My Custom Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Exo", sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
-    /*========== Font weight ==========*/
-    --font-medium: 500;
-    --font-semi-bold: 600;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
 
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
 
-    /*========== gradients ==========*/
-    --gradients: linear-gradient(45deg, #ffffff, #f9f9f9, #f0f0f0, rgb(209, 209, 209));
+  /*========== gradients ==========*/
+  --gradients: linear-gradient(
+    45deg,
+    #ffffff,
+    #f9f9f9,
+    #f0f0f0,
+    rgb(209, 209, 209)
+  );
 }
 
 @media screen and (min-width: 968px) {
-    :root {
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: 0.875rem;
-        --smaller-font-size: 0.813rem;
-    }
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
 }
 
 /*=============== BASE CSS ===============*/
 
 /* Caption text */
 .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    color: var(--text-color);
-    background: url('https://e0.pxfuel.com/wallpapers/128/380/desktop-wallpaper-house-md-background-victorian-dollhouse-halloween-house-and-lighthouse-dr-house-md.jpg')    top center;
-    background-size: cover;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  background: url("../../moti2.jpg");
+  background-repeat: no-repeat;
+  background-color: #000000;
+  background-position: center;
 }
 
-
-
 @keyframes bg-anim {
-    0% {
-        background-position: left;
-    }
-    100% {
-        background-position: right;
-    }
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 h1,
 h2,
 h3 {
-    color: black;
-    font-weight: var(--font-semi-bold);
+  color: black;
+  font-weight: var(--font-semi-bold);
 }
 
 ul {
-    list-style: none;
-    margin-top: 1rem;
+  list-style: none;
+  margin-top: 1rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-    max-width: 1024px;
+  max-width: 1024px;
 }
 
 .grid {
-    display: grid;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
-
-
 .main {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /*=============== HEADER & NAV BAR ===============*/
 
 .site_logo {
-    width: 37%;
-    /* margin-top: 10px; */
+  width: 37%;
+  /* margin-top: 10px; */
 }
-
 
 /*=============== BUTTON ===============*/
 .button {
-    display: inline-block;
-    background-color: var(--first-color);
-    color: var(--white-color);
-    padding: 0.5rem 2rem;
-    border-radius: 0.25rem;
-    font-size: var(--normal-font-size);
-    transition: 0.3s;
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  font-size: var(--normal-font-size);
+  transition: 0.3s;
 }
 .button:hover {
-    background-color: var(--first-color-alt);
+  background-color: var(--first-color-alt);
 }
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-    width: 0.5rem;
-    background-color: hsl(219, 4%, 16%);
-    border-radius: 1rem;
+  width: 0.5rem;
+  background-color: hsl(219, 4%, 16%);
+  border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(219, 4%, 24%);
-    border-radius: 1rem;
+  background-color: hsl(219, 4%, 24%);
+  border-radius: 1rem;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(219, 4%, 32%);
+  background-color: hsl(219, 4%, 32%);
 }
 
 /* Show Scroll Up*/
 
 .show-scroll {
-    bottom: 3rem;
+  bottom: 3rem;
 }
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 395px) {
-
 }
 
 /* For medium devices */
 @media screen and (min-width: 767px) {
-
-
-
 }
 
 /* For large devices */
 
 @media screen and (min-width: 1040px) {
-
-    .section {
-        width: 100%;
-        padding: 1.5rem 0 2rem;
-
-    }
-
-    .addNewLink{
-        height: 250px;
-    }
-
-    .lablesCont{
-        height: 200px;    
-    }
-    
-    .colored-box {
-        width: 35%;
-    }
-}
-
-
-.addNewLink{
-    display: flex;
-    justify-content: center;
+  .section {
     width: 100%;
-    padding: 30px;
+    padding: 1.5rem 0 2rem;
+  }
+
+  .addNewLink {
+    height: 250px;
+  }
+
+  .lablesCont {
+    height: 200px;
+  }
+
+  .colored-box {
+    width: 30%;
+  }
 }
 
-.lablesCont{
-    width: 70%;
-    background-color: #232323;
-    border-radius: 5px;
-    border: 2px solid #474747;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch; 
-    flex-direction: row-reverse;
-
+.addNewLink {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 30px;
 }
 
+.lablesCont {
+  width: 70%;
+  background-color: #232323;
+  border-radius: 5px;
+  border: 2px solid #474747;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row-reverse;
+}
 
 #linkForm {
-    width: 30%;
-    padding: 20px;
+  width: 30%;
+  padding: 20px;
 }
 
 .inputsContainer input {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    border: 2px solid #474747;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #474747;
 }
 
 .inputsContainer button {
-    width: 25%;
-    padding: 8px;
-    background-color: #0051a8;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+  width: 25%;
+  padding: 8px;
+  background-color: #0051a8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .inputsContainer button:hover {
-    background-color: #003a78;
+  background-color: #003a78;
 }
-
 
 .socialMediaIcons {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .socialMediaIcons i {
-font-size: 40px;
-margin: 25px;
-color: #757474;
+  font-size: 40px;
+  margin: 25px;
+  color: #757474;
 }
 .socialMediaIcons i:hover {
-
-color: #d5d5d5;
+  color: #d5d5d5;
 }
 
 .colored-box {
-    border-radius: 5px;
-    border: 2px solid #474747;
-    background-color: #232323;
-    padding: 15px;
+  border-radius: 5px;
+  border: 2px solid #474747;
+  background-color: #232323;
+  padding: 15px;
 }
 
-.mainDiv{
-    display: flex;
-    justify-content: center;
+.mainDiv {
+  display: flex;
+  justify-content: center;
 }
 
-.data-section{
-    padding: 10px 20px;
+.data-section {
+  padding: 10px 20px;
 }
 
 .icon {
-    margin-right: 10px; /* Add spacing between icon and link text */
+  margin-right: 10px; /* Add spacing between icon and link text */
 }
 
 .link-element {
-    display: inline-block; /* Display link and icon on the same line */
-    text-decoration: none;
-    color: #cacaca;
-    font-size: 16px;
-    
+  display: inline-block; /* Display link and icon on the same line */
+  text-decoration: none;
+  color: #cacaca;
+  font-size: 16px;
 }
 
-.data-row{
-    margin: 10px;
-    display: flex; /* Use flex layout for row items */
-    align-items: center; /* Align items vertically in the center */
-    justify-content: space-between; /* Distribute items evenly, pushing the delete icon to the end */
-  
+.data-row {
+  margin: 10px;
+  display: flex; /* Use flex layout for row items */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Distribute items evenly, pushing the delete icon to the end */
 }
-#linkType{
-    padding: 3px;
-    margin: 5px;
-    background-color: #232323;
-    color: #cacaca;
-}
-
-.contDiv{
-    width: 60%;
+#linkType {
+  padding: 3px;
+  margin: 5px;
+  background-color: #232323;
+  color: #cacaca;
 }
 
-.divTitle{
-    margin: 0 20px 0 20px;
-    border-bottom: 2px solid #cacaca;
-    color: #cacaca;
-    padding-bottom: 10px;
+.contDiv {
+  width: 68%;
+}
+
+.divTitle {
+  margin: 0 20px 0 20px;
+  border-bottom: 2px solid #cacaca;
+  color: #cacaca;
+  padding-bottom: 10px;
 }
 
 /* For small devices */
 @media screen and (max-width: 768px) {
-    .addNewLink {
-        flex-direction: column;
-        padding: 15px;
-    }
+  .addNewLink {
+    flex-direction: column;
+    padding: 15px;
+  }
 
-    .lablesCont {
-        width: 100%;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
+  .lablesCont {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
-    #linkForm {
-        width: 100%;
-        margin-bottom: 15px;
-    }
+  #linkForm {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
-    .socialMediaIcons {
-        width: 75%;
-        justify-content: center;
-        margin-top: 20px;
-        display: flex;
-        flex-wrap: wrap;
-    }
+  .socialMediaIcons {
+    width: 75%;
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .socialMediaIcons i {
-        margin: 10px;
-    }
+  .socialMediaIcons i {
+    margin: 10px;
+  }
 
-    .colored-box {
-        height: auto;
-        width: 90%;
-        margin: 0 0 15px 0;
-    }
+  .colored-box {
+    height: auto;
+    width: 90%;
+    margin: 0 0 15px 0;
+  }
 
-    .contDiv {
-        align-items: center;
-                width: 100%;
-        flex-direction: column;
+  .contDiv {
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
 
-    }
-
-    .divTitle {
-        margin: 0 0 10px 0;
-        padding-bottom: 5px;
-        font-size: 1.25rem;
-        text-align: center;
-    }
+  .divTitle {
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    font-size: 1.25rem;
+    text-align: center;
+  }
 }
 
 /* For medium devices */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .addNewLink {
-        height: auto;
-        padding: 15px;
-    }
+  .addNewLink {
+    height: auto;
+    padding: 15px;
+  }
 
-    .lablesCont {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
+  .lablesCont {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    #linkForm {
-        width: 100%;
-        margin-bottom: 15px;
-    }
+  #linkForm {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
-    .socialMediaIcons {
-        width: 100%;
-        justify-content: center;
-        margin-top: 20px;
-    }
+  .socialMediaIcons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
 
-    .socialMediaIcons i {
-        margin: 10px;
-    }
+  .socialMediaIcons i {
+    margin: 10px;
+  }
 
-    .colored-box {
-        height: auto;
-    }
+  .colored-box {
+    height: auto;
+  }
 
-    .contDiv {
-        width: 100%;
-    }
+  .contDiv {
+    width: 100%;
+  }
 
-    .divTitle {
-        margin: 0 0 10px 0;
-        padding-bottom: 5px;
-        font-size: 1.25rem;
-        text-align: center;
-    }
+  .divTitle {
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    font-size: 1.25rem;
+    text-align: center;
+  }
 }
 
-.contDiv{
-    display: flex;
-    justify-content: space-between;
+.contDiv {
+  display: flex;
+  justify-content: space-between;
 }
 
-.delete-icon{
-    color: #757575;
-    margin: 0 15px;
-    font-size: 20px; /* Adjust the font size if needed */
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
+.delete-icon {
+  color: #757575;
+  margin: 0 15px;
+  font-size: 20px; /* Adjust the font size if needed */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
 .delete-icon:hover {
-    color: #2f2f2f; /* Change color on hover */
-  }
+  color: #2f2f2f; /* Change color on hover */
+}
